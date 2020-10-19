@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        table {
+            width: 80%;
+            margin: 0 auto;
+            border-collapse: collapse;
+        }
+
+        th {
+            background: #dddddd;
+        }
+
+        td {
+            height: 50px;
+            text-align: center;
+            border: 1px solid #dddddd;
+        }
+
+        .block {
+            margin-bottom: 20px;
+        }
+
+        .tb1-head th {
+            position: sticky;
+            top: 0px;
+            background: yellowgreen;
+        }
+
+        .tb-wrapper {
+            display: block;
+            width: 80%;
+            margin: 0 auto;
+            overflow-x: auto;
+        }
+
+        .tb2 {
+            width: auto !important;
+            margin: 0;
+            display: block;
+            table-layout: fixed;
+        }
+
+        .tb2 td.td-sticky,
+        .tb2 th.th-sticky {
+            position: sticky;
+            left: 0px;
+            background: yellowgreen;
+            z-index: 99;
+        }
+
+        .tb2 td {
+            display: table-cell;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="block">
+        <p style="text-align: center">表格头部固定</p>
+        <table class="tb tb1">
+            <thead class="tb1-head">
+                <tr>
+                    <th>姓名</th>
+                    <th>年龄</th>
+                    <th>性别</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>张三</td>
+                    <td>24</td>
+                    <td>男</td>
+                </tr>
+                <tr>
+                    <td>张三</td>
+                    <td>23</td>
+                    <td>女</td>
+                </tr>
+                <tr>
+                    <td>张三</td>
+                    <td>25</td>
+                    <td>女</td>
+                </tr>
+                <tr>
+                    <td>张三</td>
+                    <td>30</td>
+                    <td>女</td>
+                </tr>
+                <tr>
+                    <td>张三</td>
+                    <td>31</td>
+                    <td>男</td>
+                </tr>
+                <tr>
+                    <td>张三</td>
+                    <td>32</td>
+                    <td>男</td>
+                </tr>
+                <tr>
+                    <td>张三</td>
+                    <td>33</td>
+                    <td>男</td>
+                </tr>
+                <tr>
+                    <td>张三</td>
+                    <td>34</td>
+                    <td>女</td>
+                </tr>
+                <tr>
+                    <td>张三</td>
+                    <td>45</td>
+                    <td>男</td>
+                </tr>
+                <tr>
+                    <td>张三</td>
+                    <td>26</td>
+                    <td>男</td>
+                </tr>
+                <tr>
+                    <td>张三</td>
+                    <td>34</td>
+                    <td>男</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div>
+        <p style="text-align: center">表格第一列固定</p>
+        <div class="tb-wrapper">
+            <table class="tb tb2">
+                <thead class="tb2-head">
+                    <tr>
+                        <th class="th-sticky">姓名</th>
+                        <th>年龄</th>
+                        <th>姓名</th>
+                        <th>一个很长的列名称</th>
+                        <th>一个很长的列名称</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="td-sticky" style="width: 200px;min-width: 200px;">张三</td>
+                        <td style="width: 300px;min-width: 300px;">26</td>
+                        <td style="width: 300px;min-width: 300px;">张三</td>
+                        <td style="width: 300px;min-width: 300px;">张三</td>
+                        <td style="width: 300px;min-width: 300px;">张三</td>
+                    </tr>
+                    <tr>
+                        <td class="td-sticky">张三</td>
+                        <td>23</td>
+                        <td>张三</td>
+                        <td>张三</td>
+                        <td>张三</td>
+                    </tr>
+                    <tr>
+                        <td class="td-sticky">张三</td>
+                        <td>24</td>
+                        <td>张三</td>
+                        <td>张三</td>
+                        <td>张三</td>
+                    </tr>
+                    <tr>
+                        <td class="td-sticky">张三</td>
+                        <td>25</td>
+                        <td>张三</td>
+                        <td>张三</td>
+                        <td>张三</td>
+                    </tr>
+                    <tr>
+                        <td class="td-sticky">张三</td>
+                        <td>26</td>
+                        <td>张三</td>
+                        <td>张三</td>
+                        <td>张三</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>
