@@ -1,4 +1,5 @@
 # table-sticky
+demo:  https://dream-wu.github.io/table-sticky/
 # position: sticky
 利用position 属性， 简单实现表格的粘顶、固定某列效果
 
